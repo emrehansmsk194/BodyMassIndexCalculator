@@ -27,19 +27,19 @@ def button_clicked():
         height = int(entry2.get()) / 100
         bmi = weight / (height * height)
         if bmi < 18.5:
-            result_label.config(text=f"Your BMI is {bmi}. You are in underweight.")
+            result_label.config(text=f"Your BMI is {round(bmi,2)}. You are in underweight.")
             result_label.place(x=20, y=150)
             result_label.config(pady=5)
         elif bmi < 25.0:
-            result_label.config(text=f"Your BMI is {bmi}. You are normal weight.")
+            result_label.config(text=f"Your BMI is {round(bmi,2)}. You are normal weight.")
             result_label.place(x=20, y=150)
             result_label.config(pady=5)
         elif bmi < 30.0:
-            result_label.config(text=f"Your BMI is {bmi}. You are in overweight.")
+            result_label.config(text=f"Your BMI is {round(bmi,2)}. You are in overweight.")
             result_label.place(x=20, y=150)
             result_label.config(pady=5)
         else:
-            result_label.config(text=f"Your BMI is {bmi}. You are obese.")
+            result_label.config(text=f"Your BMI is {round(bmi,2)}. You are obese.")
             result_label.place(x=20, y=150)
             result_label.config(pady=5)
     except ValueError:
